@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/JavaScript.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-controller="myController">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Picture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="car in cars">
+                    <td>{{car.Make}}</td>
+                    <td>{{car.Year}}</td>
+                    <td>{{car.Price}}</td>
+                    <td><img ng-src="{{car.pic}}"
+                         style="height:100px; width:200px" />    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
